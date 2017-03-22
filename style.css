@@ -15,6 +15,10 @@
 }
 
 
+.security-test .security-test__form {
+    max-width: 650px;
+}
+
 .security-test .security-test__note,
 .security-test .security-test__question,
 .security-test .security-test__result,
@@ -73,7 +77,7 @@
 .security-test .security-test__label {
     padding: 5px 10px;
     cursor: pointer;
-    width: 600px;
+    width: 630px;
     display: inline-block;
 }
 

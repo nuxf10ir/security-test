@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'KafkaSerifText';
+    src: url('fonts/kafkaseriftext-webfont.eot?#iefix') format('embedded-opentype');
+    src: local('KafkaSerifText'), url('fonts/kafkaseriftext-webfont.woff') format('woff'), url('fonts/kafkaseriftext-webfont.ttf') format('truetype'), url('fonts/kafkaseriftext-webfont.svg#KafkaSerifTextRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KafkaSerifText';
+    src: url('fonts/kafkaseriftext-black-webfont.eot?#iefix') format('embedded-opentype');
+    src: local('KafkaSerifText Bold'), url('fonts/kafkaseriftext-black-webfont.woff') format('woff'), url('fonts/kafkaseriftext-black-webfont.ttf') format('truetype'), url('fonts/kafkaseriftext-black-webfont.svg#KafkaSerifTextBlack') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+.security-test .security-test__note,
+.security-test .security-test__question,
+.security-test .security-test__result,
+.security-test .security-test__answer {
+    font: normal 16px/22px "KafkaSerifText", "Times New Roman", Times, serif;
+
+}
+
+.security-test .security-test__result.failed .passed-text {
+    display: none;
+}
+
+.security-test .security-test__result.passed .failed-text {
+    display: none;
+}
+
+.security-test .security-test__note,
+.security-test .security-test__question,
+.security-test .security-test__result {
+    margin-bottom: 1em;
+}
+
+.security-test .security-test__note {
+    display: none;
+    background: #f1a42e;
+    color: white;
+    padding: 0.5em 1em;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+}
+
+.security-test .security-test__note .note-title {
+    border-bottom: 1px solid;
+    padding: 0 0 .5em 0;
+}
+
+
+
+
+.security-test .security-test__answer {
+    margin: 0;
+}
+
+
+.security-test .security-test__row {
+    display: none;
+    opacity: 0;
+    position: relative;
+    margin: 0 0 3em 0;
+
+}
+
+.security-test .security-test__radio {
+    display: none;
+}
+
+.security-test .security-test__label {
+    padding: 5px 10px;
+    cursor: pointer;
+    width: 600px;
+    display: inline-block;
+}
+
+
+.security-test .security-test__label:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    vertical-align: text-top;
+    margin: 0 10px 0 0;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAMUlEQVQ4T2NkYGD4D8RkA0aqGfD/P2kOYWQE2c3AAHfBqAHAuBwNxOEQBuRmR4pzIwCWAjQBw+gPWAAAAABJRU5ErkJggg==") no-repeat;
+}
+
+.security-test .answered .security-test__label:before {
+    background: none !important;
+}
+
+.security-test .security-test__radio:checked + .security-test__label:before{
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAb0lEQVQ4T2O80ML/n4ECwEg1A/SrP5DkjoutAmD1cBcMHQNATge5liwvwDSRZQCyZlDgYXUBzHno0YGuGa8BIEnkGMGmGacByBLI/sQWxXgDESaJ7hpkrxGMBVzhATOEoAGE0jWGAYQ04JKnODcCAIhkazE1sQboAAAAAElFTkSuQmCC") no-repeat;
+}
+
+.security-test .not-answered .security-test__radio:checked + .security-test__label,
+.security-test .not-answered .security-test__label:hover,
+.security-test .answered .security-test__radio.wrong:checked + .security-test__label,
+.security-test .answered .security-test__radio.right:checked + .security-test__label {
+    color: #ffffff;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+}
+
+.security-test .not-answered .security-test__radio:checked + .security-test__label,
+.security-test .not-answered .security-test__label:hover {
+    background: #f1a42e;
+}
+
+.security-test .answered .security-test__radio.wrong:checked + .security-test__label {
+    background: #8b0000;
+}
+
+.security-test .answered .security-test__radio.right:checked + .security-test__label {
+    background: #228b22;
+}
+
+.security-test .security-test__generated-phrase {
+    font-weight: bold;
+}
+
+.security-test .security-test__reset {
+    display: inline-block;
+    background-color: #f1a42e;
+    box-sizing: border-box;
+    padding: 3px 17px;
+    height: 28px;
+    font: normal 13px / 1.53846154 Arial, Helvetica, sans-serif;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #f1a42e;
+    text-decoration: none;
+    color: #ffffff;
+}

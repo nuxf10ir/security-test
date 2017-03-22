@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор ответов для финансового директора</title>
+    <link rel="stylesheet" href="style.css" media="screen">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="security-test">
+
+        <form class="security-test__form" id="security-test__form">
+
+            <div class="security-test__row not-answered">
+
+                <p class="security-test__question">
+                    <b>1.</b> В компании есть утвержденный перечень конфиденциальных документов и данных?
+                </p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio right"
+                           type="radio"
+                           name="score1"
+                           id="security-test__answer1-1"
+                           value="10" />
+                    <label for="security-test__answer1-1" class="security-test__label">Да</label>
+                </p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio wrong"
+                           type="radio"
+                           name="score1"
+                           id="security-test__answer1-2"
+                           value="0" />
+                    <label for="security-test__answer1-2" class="security-test__label">Нет</label>
+                </p>
+
+                <div class="security-test__note">
+                    <p class="note-title">
+                        <b>Правильный ответ: &#171;Да&#187;</b>.
+                    </p>
+                    <p>
+                        Определите, какие сведения нужно контролировать.
+                        Составьте список и обсудите его с генеральным директором.
+                        Утвержденный вариант закрепите внутренним нормативным документом &mdash; &#171;Перечнем информации, составляющей коммерческую тайну&#187;.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="security-test__row not-answered">
+
+                <p class="security-test__question">
+                    <b>2.</b> Если работнику нужны документы, которые готовит другой отдел, он запрашивает их:</p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio wrong"
+                           type="radio"
+                           name="score2"
+                           id="security-test__answer2-1"
+                           value="5" />
+                    <label for="security-test__answer2-1" class="security-test__label">У своего руководителя</label>
+                </p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio wrong"
+                           type="radio"
+                           name="score2"
+                           id="security-test__answer2-2"
+                           value="0" />
+                    <label for="security-test__answer2-2" class="security-test__label">В отделе, который их составляет</label>
+                </p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio right"
+                           type="radio"
+                           name="score2"
+                           id="security-test__answer2-3"
+                           value="10"/>
+                    <label for="security-test__answer2-3" class="security-test__label">В соответствии с инструкциями</label>
+                </p>
+
+                <div class="security-test__note">
+                    <p class="note-title">
+                        <b>Правильный ответ: &#171;в соответствии с инструкциями&#187;</b>.
+                    </p>
+                    <p>
+                        В должностных инструкциях прописано, в какой отдел сотрудник обращается за информацией.
+                        Если  у него нет разрешения на пользование ей, то он обращается к своему руководителю.
+                        Тот подает запрос начальнику подразделения, которое готовит нужные документы.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="security-test__row not-answered">
+
+                <p class="security-test__question">
+                    <b>3.</b> В помещения финансовой службы могут свободно войти:</p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio wrong"
+                           type="radio"
+                           name="score3"
+                           id="security-test__answer3-1"
+                           value="0" />
+                    <label for="security-test__answer3-1" class="security-test__label">Финансисты и технический персонал</label>
+                </p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio right"
+                           type="radio"
+                           name="score3"
+                           id="security-test__answer3-2"
+                           value="10" />
+                    <label for="security-test__answer3-2" class="security-test__label">Только финансисты по пропускам</label>
+                </p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio wrong"
+                           type="radio"
+                           name="score3"
+                           id="security-test__answer3-3"
+                           value="0"/>
+                    <label for="security-test__answer3-3" class="security-test__label">Финансисты и весь топ-менеджмент</label>
+                </p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio wrong"
+                           type="radio"
+                           name="score3"
+                           id="security-test__answer3-4"
+                           value="0"/>
+                    <label for="security-test__answer3-4" class="security-test__label">Все сотрудники</label>
+                </p>
+
+                <div class="security-test__note">
+                    <p class="note-title">
+                        <b>Правильный ответ: &#171;Только финансисты по пропускам&#187;</b>.
+                    </p>
+                    <p>
+                        Посторонние лица не должны бесконтрольно заходить в помещения, в которых работают с конфиденциальными документами
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="security-test__row not-answered">
+
+                <p class="security-test__question">
+                    <b>4.</b> Сотрудники компании могут распечатать любые документы?</p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio wrong"
+                           type="radio"
+                           name="score4"
+                           id="security-test__answer4-1"
+                           value="0" />
+                    <label for="security-test__answer4-1" class="security-test__label">Да</label>
+                </p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio wrong"
+                           type="radio"
+                           name="score4"
+                           id="security-test__answer4-2"
+                           value="5" />
+                    <label for="security-test__answer4-2" class="security-test__label">Нет, только те, которые доступны для печати в их отделе</label>
+                </p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio right"
+                           type="radio"
+                           name="score4"
+                           id="security-test__answer4-3"
+                           value="10"/>
+                    <label for="security-test__answer4-3" class="security-test__label">Нет, только те, которые доступны для печати лично для них</label>
+                </p>
+
+                <div class="security-test__note">
+                    <p class="note-title">
+                        <b>Правильный ответ: &#171;Нет, только те, которые доступны для печати лично для них&#187;</b>.
+                    </p>
+                    <p>
+                        Используйте авторизированную печать, где пользователь идентифицирует себя с помощью PIN-кода или личной карточки,
+                        либо настройте политику печати, чтобы сотрудники могли печатать только то, к чему имеют доступ.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="security-test__row not-answered">
+
+                <p class="security-test__question">
+                    <b>5.</b> Сотрудники измельчают бумаги и форматируют электронные носители, прежде выбросить их?</p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio right"
+                           type="radio"
+                           name="score5"
+                           id="security-test__answer5-1"
+                           value="10" />
+                    <label for="security-test__answer5-1" class="security-test__label">Да</label>
+                </p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio wrong"
+                           type="radio"
+                           name="score5"
+                           id="security-test__answer5-2"
+                           value="0" />
+                    <label for="security-test__answer5-2" class="security-test__label">Нет</label>
+                </p>
+
+                <div class="security-test__note">
+                    <p class="note-title">
+                        <b>Правильный ответ: &#171;Да&#187;</b>.
+                    </p>
+                    <p>
+                        Запретите сотрудникам выбрасывать важные бумаги и электронные носители в мусорную корзину.
+                        Установите правило: прежде чем выбросить какие-либо документы с конфиденциальной информацией,
+                        их необходимо измельчить или форматировать электронный носитель.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="security-test__row not-answered">
+
+                <p class="security-test__question">
+                    <b>6.</b> Первичные учетные документы имеет право подписывать:</p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio right"
+                           type="radio"
+                           name="score6"
+                           id="security-test__answer6-1"
+                           value="10" />
+                    <label for="security-test__answer6-1" class="security-test__label">Генеральный директор</label>
+                </p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio wrong"
+                           type="radio"
+                           name="score6"
+                           id="security-test__answer6-2"
+                           value="0" />
+                    <label for="security-test__answer6-2" class="security-test__label">Финансовый директор</label>
+                </p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio wrong"
+                           type="radio"
+                           name="score6"
+                           id="security-test__answer6-3"
+                           value="0" />
+                    <label for="security-test__answer6-3" class="security-test__label">Руководитель подразделения или ответственный исполнитель</label>
+                </p>
+
+                <div class="security-test__note">
+                    <p class="note-title">
+                        <b>Правильный ответ: &#171;Генеральный директор&#187;</b>.
+                    </p>
+                    <p>
+                        Только руководитель предприятия имеет полномочия подписывать первичные учетные документы.
+                        Он может передать их по доверенности кому-то из подчиненных.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="security-test__row not-answered">
+
+                <p class="security-test__question">
+                    <b>7.</b> У ваших сотрудников есть доступ к интернету?</p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio wrong"
+                           type="radio"
+                           name="score7"
+                           id="security-test__answer7-1"
+                           value="0" />
+                    <label for="security-test__answer7-1" class="security-test__label">Да, у всех</label>
+                </p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio wrong"
+                           type="radio"
+                           name="score7"
+                           id="security-test__answer7-2"
+                           value="5" />
+                    <label for="security-test__answer7-2" class="security-test__label">Да, но только у тех, кому он нужен для работы</label>
+                </p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio right"
+                           type="radio"
+                           name="score7"
+                           id="security-test__answer7-3"
+                           value="10" />
+                    <label for="security-test__answer7-3" class="security-test__label">Да, но только к конкретным сайтам, необходимым для работы</label>
+                </p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio right"
+                           type="radio"
+                           name="score7"
+                           id="security-test__answer7-4"
+                           value="10" />
+                    <label for="security-test__answer7-4" class="security-test__label">Нет</label>
+                </p>
+
+                <div class="security-test__note">
+                    <p class="note-title">
+                        <b>Правильный ответ: &#171;Нет&#187;, &#171;Да, но только к конкретным сайтам, необходимым для работы&#187;</b>.
+                    </p>
+                    <p>
+                        Отключите интернет сотрудникам, которым он не нужен для работы, остальным дайте доступ только к конкретным сайтам.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="security-test__row not-answered">
+
+                <p class="security-test__question">
+                    <b>8.</b> Когда увольняете или переводите сотрудника, вы:</p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio right"
+                           type="radio"
+                           name="score8"
+                           id="security-test__answer8-1"
+                           value="10" />
+                    <label for="security-test__answer8-1" class="security-test__label">Меняете все ключи и пароли, к которым он имел доступ</label>
+                </p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio wrong"
+                           type="radio"
+                           name="score8"
+                           id="security-test__answer8-2"
+                           value="0" />
+                    <label for="security-test__answer8-2" class="security-test__label">Меняете только те ключи и пароли, которые защищают информацию на сервере</label>
+                </p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio wrong"
+                           type="radio"
+                           name="score8"
+                           id="security-test__answer8-3"
+                           value="0" />
+                    <label for="security-test__answer8-3" class="security-test__label">Меняете пароли только если сотрудник занимал высокую должность и имел доступ к важной информации</label>
+                </p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio wrong"
+                           type="radio"
+                           name="score8"
+                           id="security-test__answer8-4"
+                           value="0" />
+                    <label for="security-test__answer8-4" class="security-test__label">Не меняете пароли</label>
+                </p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio wrong"
+                           type="radio"
+                           name="score8"
+                           id="security-test__answer8-5"
+                           value="0" />
+                    <label for="security-test__answer8-5" class="security-test__label">Иногда меняете, иногда нет &mdash; система не налажена</label>
+                </p>
+
+                <div class="security-test__note">
+                    <p class="note-title">
+                        <b>Правильный ответ: &#171;Меняете все ключи и пароли, к которым он имел доступ&#187;</b>.
+                    </p>
+                    <p>
+                        Когда увольняете работника, переводите в другое подразделение или меняете его обязанности,
+                        смените все пароли, к которым он имел доступ и проконтролируйте, чтобы он сдал все электронные носители.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="security-test__row not-answered">
+
+                <p class="security-test__question">
+                    <b>9.</b> Ответственность сотрудника за распространение информации прописана в:</p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio wrong"
+                           type="radio"
+                           name="score9"
+                           id="security-test__answer9-1"
+                           value="5" />
+                    <label for="security-test__answer9-1" class="security-test__label">Должностной инструкции сотрудника</label>
+                </p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio wrong"
+                           type="radio"
+                           name="score9"
+                           id="security-test__answer9-2"
+                           value="5" />
+                    <label for="security-test__answer9-2" class="security-test__label">Трудовом договоре</label>
+                </p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio wrong"
+                           type="radio"
+                           name="score"
+                           id="security-test__answer9-3"
+                           value="5" />
+                    <label for="security-test__answer9-3" class="security-test__label">Положении о коммерческой тайне</label>
+                </p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio wrong"
+                           type="radio"
+                           name="score9"
+                           id="security-test__answer9-4"
+                           value="0" />
+                    <label for="security-test__answer9-4" class="security-test__label">Положении о работе с финансовыми сведениями, носящими конфиденциальный характер</label>
+                </p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio right"
+                           type="radio"
+                           name="score9"
+                           id="security-test__answer9-5"
+                           value="10" />
+                    <label for="security-test__answer9-5" class="security-test__label">Во всех этих документах</label>
+                </p>
+
+                <div class="security-test__note">
+                    <p class="note-title">
+                        <b>Правильный ответ: &#171;Во всех этих документах&#187;</b>.
+                    </p>
+                    <p>
+                        Закрепите ответственность сотрудника в нормативных документах и ознакомьте его с ними под подпись:
+                        &#171;Должностная инструкция сотрудника&#187;, &#171;Трудовой договор&#187;, &#171;Положение о коммерческой тайне&#187;,
+                        &#171;Положение/регламент по работе с финансовой документацией/сведениями, носящими конфиденциальный характер&#187;.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="security-test__row not-answered">
+
+                <p class="security-test__question">
+                    <b>10.</b> Документы, которыми пользуются сотрудники, они хранят:</p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio wrong"
+                           type="radio"
+                           name="score10"
+                           id="security-test__answer10-1"
+                           value="0" />
+                    <label for="security-test__answer10-1" class="security-test__label">На своих столах</label>
+                </p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio wrong"
+                           type="radio"
+                           name="score10"
+                           id="security-test__answer10-2"
+                           value="0" />
+                    <label for="security-test__answer10-2" class="security-test__label">В запертых ящиках столов</label>
+                </p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio wrong"
+                           type="radio"
+                           name="score10"
+                           id="security-test__answer10-3"
+                           value="5" />
+                    <label for="security-test__answer10-3" class="security-test__label">В сейфе или архиве</label>
+                </p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio wrong"
+                           type="radio"
+                           name="score10"
+                           id="security-test__answer10-4"
+                           value="0" />
+                    <label for="security-test__answer10-4" class="security-test__label">Каждый вечер сдают своему руководителю, а утром принимают под подпись</label>
+                </p>
+
+                <p class="security-test__answer">
+                    <input class="security-test__radio right"
+                           type="radio"
+                           name="score10"
+                           id="security-test__answer10-5"
+                           value="10" />
+                    <label for="security-test__answer10-5" class="security-test__label">У себя на столах или в архиве &mdash; в зависимости от рекомендаций по работе с конкретными бумагами</label>
+                </p>
+
+                <div class="security-test__note">
+                    <p class="note-title">
+                        <b>Правильный ответ: &#171;У себя на столах или в архиве &mdash; в зависимости от рекомендаций по работе с конкретными бумагами&#187;</b>.
+                    </p>
+                    <p>
+                        Закрепите в регламенте, какие документы сотрудник может хранить на рабочем столе в распечатанном виде, а какие должен сдавать в архив или сейф.
+                        Определите, кто отвечает за работу с сейфом и архивом и кто имеет к ним допуск.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="security-test__row security-test__result failed">
+
+                <h2>Результаты</h2>
+
+                <p>Вы набрали <span class="result-value"></span> баллов.</p>
+
+                <p class="failed-text">
+                    Вам есть, что изменить в работе.
+                    Как усовершенствовать систему информационной безопасности в финансовом отделе,
+                    читайте в статье "Сам себе ФСБ: инструменты информационной безопасности"
+                </p>
+
+                <p class="passed-text">
+                    Вы предусмотрели все возможности утечки информации.
+                    Конфиденциальные финансовые документы в вашей компании в безопасности.
+                </p>
+
+
+            </div>
+
+
+        </form>
+
+
+    </div>
+</body>
+</html>

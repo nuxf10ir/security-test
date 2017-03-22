@@ -94,7 +94,7 @@
 }
 
 .security-test .answered .security-test__label:before {
-    background: none !important;
+    background: none;
 }
 
 .security-test .security-test__radio:checked + .security-test__label:before{

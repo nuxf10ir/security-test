@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
     var $form = $("#security-test__form"),
+        $rows = $(".security-test__row", $form),
         $result = $(".security-test__result", $form),
         testScore = 0,
         crucialScore = 70;
@@ -8,33 +9,52 @@ $(document).ready(function () {
 
     
 
-    function animateShow(showNote, showQuestion) {
-        var $dfd = new $.Deferred(),
-            $promise = $dfd.promise();
+    function animateShow(showNote, showQuestion, hideQuestion) {
+        var $showNoteDfd = new $.Deferred(),
+            $showNotePromise = $showNoteDfd.promise(),
+            $hideQuestionDfd = new $.Deferred(),
+            $hideQuestionPromise = $hideQuestionDfd.promise();
 
-        if (showNote) {
-
-            showNote.css({
-                opacity: 0,
-                top: 20,
-                display: "block"
-            });
-
-            showNote
+        if (hideQuestion) {
+            hideQuestion
                 .animate({
-                    opacity: 1,
-                    top: 0
+                    opacity: 0,
+                    top: -500
                 }, {
                     duration: 600,
                     complete: function () {
-                        $dfd.resolve();
+                        hideQuestion.hide();
+                        $hideQuestionDfd.resolve();
                     }
                 });
         } else {
-            $dfd.resolve();
+            $hideQuestionDfd.resolve();
         }
 
-        $.when($promise).then(function () {
+        $.when($hideQuestionPromise).then(function () {
+            if (showNote) {
+                showNote.css({
+                    opacity: 0,
+                    top: 20,
+                    display: "block"
+                });
+
+                showNote
+                    .animate({
+                        opacity: 1,
+                        top: 0
+                    }, {
+                        duration: 600,
+                        complete: function () {
+                            $showNoteDfd.resolve();
+                        }
+                    });
+            } else {
+                $showNoteDfd.resolve();
+            }
+        });
+
+        $.when($showNotePromise).then(function () {
             showQuestion.css({
                 opacity: 0,
                 top: 20
@@ -60,7 +80,9 @@ $(document).ready(function () {
             var $thisInput = $(this),
                 $note = $block.find(".security-test__note"),
                 $next = $block.next(".security-test__row"),
-                $rowInputs = $block.find(".security-test__radio");
+                $rowInputs = $block.find(".security-test__radio"),
+                rowIndex = parseInt($block.data("index")),
+                $prev = null;
 
             $block
                 .toggleClass("not-answered", false)
@@ -71,8 +93,12 @@ $(document).ready(function () {
 
             refreshResult(parseInt($thisInput.val()));
 
+            if (rowIndex > 0) {
+                $prev = $rows.eq(--rowIndex);
+            }
+
             if ($next.is(":hidden")) {
-                animateShow($note, $next);
+                animateShow($note, $next, $prev);
             }
         });
     }

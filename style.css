@@ -106,7 +106,7 @@
 .security-test .answered .security-test__radio.wrong:checked + .security-test__label,
 .security-test .answered .security-test__radio.right:checked + .security-test__label {
     color: #ffffff;
-    text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
 }
 
 .security-test .not-answered .security-test__radio:checked + .security-test__label,
@@ -115,11 +115,11 @@
 }
 
 .security-test .answered .security-test__radio.wrong:checked + .security-test__label {
-    background: #8b0000;
+    background: #FF5200;
 }
 
 .security-test .answered .security-test__radio.right:checked + .security-test__label {
-    background: #228b22;
+    background: #14CC54;
 }
 
 .security-test .security-test__generated-phrase {
